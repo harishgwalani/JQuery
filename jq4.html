@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // $("p").mouseenter(function () {
+        //   $("p").css({ "background-color": "black", color: "white" });
+        // });
+        // $("p").dblclick(function () {
+        //   $("p").css({ "background-color": "grey", color: "white" });
+        // });
+        // $("p").mouseleave(function () {
+        //   $("p").css({ "background-color": "red", color: "black" });
+        // });
+        $("p").on({
+            mouseenter:function()
+            {
+                $("p").css({ "background-color": "black", color: "white" });  
+            },
+            dblclick:function()
+            {
+                $("p").css({ "background-color": "grey", color: "black" });
+            },
+            mouseleave:function()
+            {
+                $("p").css({ "background-color": "red", color: "black" });
+            }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p>Harish</p>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#name,#classname,#country").focus(function () {
+          $(this).css("background-color", "yellow");
+        });
+        $("#name,#classname,#country").blur(function () {
+          $(this).css("background-color", "");
+        });
+        $("#country").change(function () {
+          $(this).css("background-color", "pink");
+        });
+        $("#name,#classname").select(function () {
+          $(this).css("background-color", "red");
+        });
+        $("#sform").click(function (e) {
+   
+          var a=$("#name").val();
+          console.log(a);
+          var b=$("#classname").val();
+          console.log(b);
+          var c=$("#country").val();
+          console.log(c);
+        });
+      });
+    </script>
+  </head>
+  <style>
+    #set {
+      padding: 20px;
+      margin: 20px;
+    }
+  </style>
+  <body>
+    <div id="set">
+      <form action="#" id="sform">
+        <label for="">Name</label>
+        <input type="text" name="name" id="name" />
+        <br />
+        <label for="">Class</label>
+        <input type="text" name="classname" id="classname" />
+        <br />
+        <label for="">country</label>
+
+        <select name="country" id="country">
+          <option value="india">India</option>
+          <option value="pakistan">Pakistan</option>
+          <option value="America">America</option>
+          <option value="Freance">France</option>
+        </select><br>
+
+    <button id="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>

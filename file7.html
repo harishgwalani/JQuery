@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function()
+        {
+$("#fadeout").click(function()
+{
+    $("#img1").fadeOut();
+    $("#img2").fadeOut("slow");
+    $("#img3").fadeOut(3000);
+  });
+  $("#fadein").click(function()
+{
+    $("#img1").fadeIn();
+    $("#img2").fadeIn("slow");
+    $("#img3").fadeIn(3000);
+  });
+  $("#toggle").click(function()
+{
+    $("#img1").fadeToggle();
+    $("#img2").fadeToggle("slow");
+    $("#img3").fadeToggle(3000);
+  });
+});
+    </script>
+</head>
+<body>
+  <img src="/1.jpg" id="img1" height="200px"> 
+  <img src="/2.jpg" id="img2" height="200px">
+  <img src="/3.jpg" id="img3" height="200px"> 
+  <button id="fadeout">Fadeout</button>
+  <button id="fadein">FadeIn</button>
+  <button id="toggle">Toggle</button>
+</body>
+</html>

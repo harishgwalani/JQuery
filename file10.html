@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <title>Document</title>
+    <style>
+      #info {
+        left: 600px;
+        position: absolute;
+        top: 200px;
+      }
+      .deco {
+        background-color: red;
+        color: black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <h1>AI Infotech</h1>
+      <p>IT Training and Placement</p>
+    </div>
+    <div id="div2" class="deco">
+      <img src="/1.jpg" alt="" />
+      <p id="info">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
+        officia nemo possimus quis provident eos expedita alias odio labore
+        quidem minima<b>
+          nisi molestiae corporis impedit corrupti, in repellat mollitia dolorum
+          tempore, nobis consectetur placeat.</b
+        >
+      </p>
+    </div>
+    <button id="text">Text</button>
+    <button id="html1">HTML</button>
+    <button id="attr">Attribute</button>
+
+    <script>
+      $(document).ready(function () {
+        $("#text").click(function () {
+          var a = $("#info").text();
+          console.log(a);
+          console.log(typeof a);
+        });
+        $("#html1").click(function () {
+          var a = $("#info").html();
+          console.log(a);
+          console.log(typeof a);
+        });
+        $("#attr").click(function () {
+          var a = $("#div2").attr("class");
+          console.log(a);
+          console.log(typeof a);
+        });
+      });
+    </script>
+  </body>
+</html>
